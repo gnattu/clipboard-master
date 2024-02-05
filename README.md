@@ -6,10 +6,16 @@
 
 Clipboard monitoring library.
 
+## Disclaimer
+
+This if forked from upstream for providing **plain-text only** support for Wayland compositors implemented `wlr_data_control`.
+
+Currently, wlroots-based compositors and KDE's KWin implemented this protocol, but GNOME's Mutter did not.
+
 ## Supported platforms
 
 - Windows - uses dummy window to receive messages when clipboard changes;
-- Linux - uses [x11_clipboard](https://github.com/quininer/x11-clipboard)
+- Linux - uses [arboard](https://github.com/1Password/arboard) with polling and compare hashing
 - MacOS - uses polling via `NSPasteboard::changeCount` as there is no event notification.
 
 ## Clipboard Master Library
